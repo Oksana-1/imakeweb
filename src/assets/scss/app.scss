@@ -1,0 +1,573 @@
+@font-face {
+  font-family: 'Panton';
+  src: url('/src/assets/fonts/Panton-LightCaps.eot');
+  src: url('/src/assets/fonts/Panton-LightCaps.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Panton-LightCaps.woff2') format('woff2'),
+  url('/src/assets/fonts/Panton-LightCaps.woff') format('woff'),
+  url('/src/assets/fonts/Panton-LightCaps.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panton';
+  src: url('/src/assets/fonts/Panton-BlackCaps.eot');
+  src: url('/src/assets/fonts/Panton-BlackCaps.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Panton-BlackCaps.woff2') format('woff2'),
+  url('/src/assets/fonts/Panton-BlackCaps.woff') format('woff'),
+  url('/src/assets/fonts/Panton-BlackCaps.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Bold.eot');
+  src: url('/src/assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('/src/assets/fonts/Montserrat-Bold.woff') format('woff'),
+  url('/src/assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Medium.eot');
+  src: url('/src/assets/fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+  url('/src/assets/fonts/Montserrat-Medium.woff') format('woff'),
+  url('/src/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Light.eot');
+  src: url('/src/assets/fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Montserrat-Light.woff2') format('woff2'),
+  url('/src/assets/fonts/Montserrat-Light.woff') format('woff'),
+  url('/src/assets/fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/Montserrat-Regular.eot');
+  src: url('/src/assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+  url('/src/assets/fonts/Montserrat-Regular.woff') format('woff'),
+  url('/src/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/src/assets/fonts/OpenSans-SemiBold.eot');
+  src: url('/src/assets/fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+  url('/src/assets/fonts/OpenSans-SemiBold.woff') format('woff'),
+  url('/src/assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/src/assets/fonts/OpenSans-Regular.eot');
+  src: url('/src/assets/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('/src/assets/fonts/OpenSans-Regular.woff') format('woff'),
+  url('/src/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/src/assets/fonts/OpenSans-Bold.eot');
+  src: url('/src/assets/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/src/assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('/src/assets/fonts/OpenSans-Bold.woff') format('woff'),
+  url('/src/assets/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin box-sizing($sizing:border-box) {
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  transition: $args;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+@mixin transform($transforms) {
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin rotate ($angle) {
+  @include transform(rotate($angle));
+}
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+/*$dark: #3a3a3a;
+$darker: #323232;
+$textgrey: #9B9B9B;
+$bkgndgrey: #f2f2f2;*/
+$text: #3a3a3a;
+$border: #C5CAE9;
+$dark: #283593;
+$darker: #1A237E;
+$textlight: #536DFE;
+$light: #E8EAF6;
+$blue: #3F51B5;
+$panton: 'Panton', san-serif;
+$mont: 'Montserrat', san-serif;
+$open: 'Open Sans', san-serif;
+.im-blog-general-wrap{
+  color: $text;
+  background-color: #fff;
+  font-size: 16px;
+}
+* { margin: 0; padding: 0; }
+fieldset, input, textarea { outline: none; color: inherit; -webkit-appearance: none; background: none; border: none; border-radius: 0; font-family: inherit; resize: none; line-height: normal; }
+select { outline: none; color: inherit; background: none; border: none; border-radius: 0; font-family: inherit; resize: none; line-height: normal; cursor: pointer; }
+input:active, textarea:active { outline: none; }
+:focus { outline: none; }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent !important; }
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder { color: transparent !important; }
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent !important; }
+input::-ms-clear { display: none; }
+address, article, aside, canvas, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+.noselect { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+a, a:hover, a:visited, a:focus, a:active { border: none; outline: none; text-decoration: none; cursor: pointer; }
+p { margin-bottom: 5px; }
+a { color: inherit; }
+div { display: block; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: inherit; }
+a img { border: 0; }
+ul { list-style: none; }
+svg { display: inline-block; fill: currentColor; vertical-align: top; }
+.clear { clear: both; }
+.clearfix:after, .clear_after:after { content: ''; display: block; clear: both; }
+.vfixed-container { font-size: 0; }
+.vfix { height: 100%; width: 0; display: inline-block; vertical-align: middle; }
+.c-box-110{
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.c-box-74{
+  max-width: 740px;
+  margin: 0 auto;
+}
+.im-wrapper{
+  position: relative;
+}
+.c-container{
+  font-size: 0;
+}
+.col-50{
+  display: inline-block;
+  width: 50%;
+  @include box-sizing;
+}
+.col-33{
+  display: inline-block;
+  width: 33.33%;
+  @include box-sizing;
+}
+.col-66{
+  display: inline-block;
+  width: 66.66%;
+  @include box-sizing;
+}
+img.fits{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.img-fix {
+  position: relative;
+}
+.img-33{
+  padding-top: 33%;
+}
+.img-fix .img, .img-fix img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.im-common-title{
+  font-family: $panton;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.im-common-subtitle{
+  font-family: $mont;
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+a.block-link{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.im-header-wrap{
+  position: fixed;
+  width: 1100px;
+  z-index: 100;
+}
+.im-sandwich-wrap{
+  position: absolute;
+  top: 0;
+  right: -90px;
+  background-color: $dark;
+  width: 90px;
+  height: 90px;
+  -webkit-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.08);
+  &:hover{
+    .im-sandwich{
+      &::before{
+        top: 6px;
+      }
+      &::after{
+        bottom: 6px;
+      }
+    }
+  }
+}
+.im-sandwich-inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: auto;
+}
+.im-sandwich{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  &::before, &::after{
+    @include pseudo;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #fff;
+    @include transition(all 0.3s ease);
+  }
+  &::before{
+    top: 9px;
+  }
+  &::after{
+    bottom: 9px;
+  }
+}
+.im-footer{
+  background-color: $dark;
+  color: #fff;
+  padding: 45px 0 0 0;
+  z-index: 5;
+  .im-footer-container{
+    padding: 0 0 45px 0;
+  }
+  .col-33, .col-66{
+    vertical-align: top;
+  }
+  .col-33 .contact-col-inner{
+    padding: 86px 20px 0 0;
+  }
+  .im-copyright{
+    font-size: 12px;
+    background-color: $darker;
+    padding: 12px 0;
+    p{
+      margin: 0;
+    }
+  }
+}
+.im-blog-general-wrap{
+  position: relative;
+  padding: 45px 0;
+  .im-title-wrap{
+    text-align: center;
+  }
+}
+.im-posts-container{
+  margin: 0 -10px;
+}
+
+.im-post-inner{
+  background-color: $light;
+  position: relative;
+  margin-bottom: 45px;
+  .post-img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .im-post-img{
+    width: 180px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .im-post-info{
+    width: calc(100% - 180px);
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+    .im-post-date{
+      color: $blue;
+      font-family: $open;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include transition (color 0.5s ease);
+    }
+    .im-post-title{
+      font-family: $mont;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include transition (color 0.5s ease);
+    }
+    .im-post-descr{
+      font-family: $open;
+      font-size: 14px;
+      font-weight: 300;
+      @include transition (color 0.5s ease);
+    }
+  }
+  &::before{
+    @include pseudo;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: $dark;
+    @include transition(width 0.8s cubic-bezier(.455,.03,.515,.955));
+  }
+  &:hover{
+    .im-post-date, .im-post-title, .im-post-descr{
+      color: #fff;
+    }
+    &::before{
+      width: 100%;
+    }
+  }
+}
+.col-post{
+  padding: 0 10px;
+}
+.im-tags-wrap{
+  margin-bottom: 70px;
+  padding: 30px;
+  background-color: $light;
+}
+.im-tag{
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 5px 10px;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  span{
+    position: relative;
+    font-family: $mont;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+  }
+  &::before{
+    @include pseudo;
+    background-color: $dark;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    -webkit-transition: width 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: width 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  &:hover{
+    span{
+      color: #fff;
+    }
+    &::before{
+      width: 100%;
+    }
+  }
+}
+.im-tag-container {
+  text-align: center;
+}
+.im-blog-text-cont{
+  code{
+    display: block;
+    padding: 20px;
+    background-color: $light;
+    font-size: 12px;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+}
+.im-form {
+  input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: $dark;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include transition(all 0.3s ease);
+    &:hover{
+      color: #fff;
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+  input:not([type="submit"]){
+    width: 100%;
+    height: 40px;
+    border: 1px solid $darker;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: $darker;
+    font-size: 14px;
+    padding: 0 10px;
+    @include box-sizing;
+    &:focus{
+      background-color: #fff;
+      color: $dark;
+    }
+  }
+  textarea{
+    width: 100%;
+    height: 140px;
+    border: 1px solid $darker;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: $darker;
+    font-size: 14px;
+    padding: 10px;
+    @include box-sizing;
+    &:focus{
+      background-color: #fff;
+      color: $dark;
+    }
+  }
+  .col-50{
+    vertical-align: top;
+    padding: 0 10px;
+  }
+  &.contact-col-inner{
+    margin: 0 -10px;
+    text-align: center;
+  }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color:  $light; }
+  input:-moz-placeholder, textarea:-moz-placeholder { color:  $light; }
+  input::-moz-placeholder, textarea::-moz-placeholder { color:  $light; }
+  div.wpcf7-validation-errors, div.wpcf7-response-output{
+    border: none;
+  }
+  input.wpcf7-not-valid{
+    border-color: red;
+  }
+  div.wpcf7-response-output{
+    font-size: 12px;
+  }
+}
+.contact-row-wrap{
+  margin-bottom: 10px;
+}
+.contact-row{
+  position: relative;
+  display: inline-block;
+  &::before{
+    @include pseudo;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: $blue;
+    @include transition(width 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955));
+  }
+  &:hover{
+    &::before{
+      width: 100%;
+    }
+    .contact-text{
+      color: #fff;
+    }
+    .contact-svg-wrap{
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}
+.contact-svg-wrap{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-color: #fff;
+  color: $dark;
+  @include transition(all 0.3s ease);
+}
+.svgcontact{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.contact-text{
+  width: calc(100% - 40px);
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: 0 20px 0 10px;
+  @include box-sizing;
+  color: $light;
+  position: relative;
+  z-index: 2;
+  @include transition(color 0.5s ease);
+}
