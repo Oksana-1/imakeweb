@@ -1,0 +1,25 @@
+
+@mixin box-sizing($sizing:border-box) {
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  transition: $args;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+@mixin transform($transforms) {
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin rotate ($angle) {
+  @include transform(rotate($angle));
+}
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}

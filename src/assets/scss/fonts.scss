@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:400,700&display=swap');
+@mixin addFont ($style-name, $font-weight, $file-name) {
+  $font-folder: '/assets/fonts';
+  @font-face {
+    font-family: $style-name;
+    src: url($font-folder +  $file-name + '.eot'),
+    url($font-folder +  $file-name + '.eot?#iefix') format('embedded-opentype'),
+    url($font-folder +  $file-name + '.woff') format('woff'),
+    url($font-folder +  $file-name + '.woff2') format('woff2'),
+    url($font-folder +  $file-name + '.ttf') format('truetype'),
+    url($font-folder +  $file-name + '.svg#' + $style-name + '') format('svg');
+    font-weight: $font-weight;
+    font-style: normal;
+  }
+}
+@include addFont('Panton', 300, 'Panton-LightCaps');
+@include addFont('Panton', 900, 'Panton-BlackCaps');
