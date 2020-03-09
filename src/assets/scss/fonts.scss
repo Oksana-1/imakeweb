@@ -3,12 +3,12 @@
   $font-folder: '/assets/fonts';
   @font-face {
     font-family: $style-name;
-    src: url($font-folder +  $file-name + '.eot'),
-    url($font-folder +  $file-name + '.eot?#iefix') format('embedded-opentype'),
-    url($font-folder +  $file-name + '.woff') format('woff'),
-    url($font-folder +  $file-name + '.woff2') format('woff2'),
-    url($font-folder +  $file-name + '.ttf') format('truetype'),
-    url($font-folder +  $file-name + '.svg#' + $style-name + '') format('svg');
+    src: asset-url($font-folder +  $file-name + '.eot');
+    src: asset-url($font-folder +  $file-name + '.eot?#iefix') format('embedded-opentype'),
+    asset-url($font-folder +  $file-name + '.woff') format('woff'),
+    asset-url($font-folder +  $file-name + '.woff2') format('woff2'),
+    asset-url($font-folder +  $file-name + '.ttf') format('truetype'),
+    asset-url($font-folder +  $file-name + '.svg#' + $style-name + '') format('svg');
     font-weight: $font-weight;
     font-style: normal;
   }

@@ -1,0 +1,21 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+}
+.about-img-container {
+  padding: 30px;
+  position: relative;
+  &::before {
+    @include pseudo;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: $light;
+  }
+}
+.about-text-container {
+  padding: 0 50px;
+  margin-bottom: 30px;
+}

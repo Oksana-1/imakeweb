@@ -1,33 +1,20 @@
-.clear { clear: both; }
-.clearfix:after, .clear_after:after { content: ''; display: block; clear: both; }
-.vfixed-container { font-size: 0; }
-.vfix { height: 100%; width: 0; display: inline-block; vertical-align: middle; }
-.c-box-110{
+.im-container-1100{
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
-.c-box-74{
+.im-container-740{
   max-width: 740px;
   margin: 0 auto;
 }
-.c-container{
-  font-size: 0;
+.flex-row{
+  display: flex;
+  flex-wrap: wrap;
 }
-.col-50{
-  display: inline-block;
+.flex-50 {
+  flex: 0 0 50%;
   width: 50%;
-  @include box-sizing;
-}
-.col-33{
-  display: inline-block;
-  width: 33.33%;
-  @include box-sizing;
-}
-.col-66{
-  display: inline-block;
-  width: 66.66%;
-  @include box-sizing;
+  max-width: 50%;
 }
 img.fits{
   max-width: 100%;
@@ -35,11 +22,11 @@ img.fits{
   width: auto;
   height: auto;
 }
+img.cover {
+  object-fit: cover;
+}
 .img-fix {
   position: relative;
-}
-.img-33{
-  padding-top: 33%;
 }
 .img-fix .img, .img-fix img{
   position: absolute;
@@ -49,19 +36,7 @@ img.fits{
   right: 0;
   margin: auto;
 }
-.im-common-title{
-  font-family: $panton;
-  font-size: 30px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-.im-common-subtitle{
-  font-family: $mont;
-  font-size: 26px;
-  font-weight: 300;
-  margin-bottom: 50px;
-}
-a.block-link{
+a.abs-block-link{
   position: absolute;
   display: block;
   top: 0;
@@ -69,4 +44,34 @@ a.block-link{
   left: 0;
   right: 0;
   z-index: 3;
+}
+.abs-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.white {
+  color: #fff;
+}
+.dark {
+  color: $dark;
+}
+.light-bg {
+  background-color: $light;
+}
+.border-bg {
+  background-color: $border;
+}
+.darker-bg {
+  background-color: $darker;
+}
+.dark-bg {
+  background-color: $dark;
+}
+.centered {
+  text-align: center;
+}
+.squared-block {
+  padding-top: 100%;
 }

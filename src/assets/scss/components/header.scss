@@ -1,0 +1,77 @@
+.im-menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $dark;
+    width: 90px;
+    height: 90px;
+    transition: width 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 100;
+    &.menuIsOpened {
+        width: 100%;
+        height: 100%;
+    }
+}
+.im-sandwich-container {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: auto;
+}
+.im-sandwich {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    &::before,
+    &::after {
+        @include pseudo;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+    &::before {
+        top: 9px;
+    }
+    &::after {
+        bottom: 9px;
+    }
+    &:hover{
+        &::before {
+            top: 6px;
+        }
+        &::after {
+            bottom: 6px;
+        }
+    }
+}
+.menuIsOpened {
+    .im-sandwich {
+        background-color: transparent;
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+    }
+}
+.im-menu-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}

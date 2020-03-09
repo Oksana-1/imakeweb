@@ -1,10 +1,10 @@
 <template>
     <footer class="im-footer">
-        <div class="c-box-110 c-container im-footer-container">
-            <div class="im-common-subtitle">Contacts</div>
-            <div class="contact-row-wrap">
+        <div class="im-container-1100">
+            <div class="im-footer-container centered">
+                <div class="im-common-title">Contacts</div>
                 <div class="contact-row">
-                    <a href="mailto:belous.oksana@gmail.com" class="block-link"></a>
+                    <a href="mailto:belous.oksana@gmail.com" class="abs-block-link"></a>
                     <div class="contact-svg-wrap">
                         <svg class="svgcontact">
                             <use xlink:href="#email"></use>
@@ -12,10 +12,8 @@
                     </div>
                     <div class="contact-text">belous.oksana@gmail.com</div>
                 </div>
-            </div>
-            <div class="contact-row-wrap">
                 <div class="contact-row">
-                    <a href="tel:+380504438488" class="block-link"></a>
+                    <a href="tel:+380504438488" class="abs-block-link"></a>
                     <div class="contact-svg-wrap">
                         <svg class="svgcontact">
                             <use xlink:href="#tel"></use>
@@ -23,10 +21,8 @@
                     </div>
                     <div class="contact-text">tel: +380 504438488</div>
                 </div>
-            </div>
-            <div class="contact-row-wrap">
                 <div class="contact-row">
-                    <a target="_blank" href="https://www.linkedin.com/in/oksana-bilous/" class="block-link"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/oksana-bilous/" class="abs-block-link"></a>
                     <div class="contact-svg-wrap">
                         <svg class="svgcontact">
                             <use xlink:href="#linkedin"></use>
@@ -37,8 +33,10 @@
             </div>
         </div>
         <div class="im-copyright">
-            <div class="c-box-110">
-                <p>&copy; Copyright 'I make web'.</p>
+            <div class="im-container-1100">
+                <div class="text centered">
+                    <p>&copy; Copyright 'I make web'.</p>
+                </div>
             </div>
         </div>
         <SvgSprite/>
@@ -54,7 +52,3 @@
         }
     }
 </script>
-
-<style scoped>
-
-</style>

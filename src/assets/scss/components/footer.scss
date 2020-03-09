@@ -1,0 +1,77 @@
+.im-footer {
+  background-color: $dark;
+  color: #fff;
+  padding: 45px 0 0 0;
+  z-index: 5;
+}
+.im-footer-container {
+  padding: 0 0 45px 0;
+}
+.im-copyright {
+  font-size: 12px;
+  background-color: $darker;
+  padding: 12px 0;
+  p{
+    margin: 0;
+  }
+}
+.contact-row-wrap {
+  margin-bottom: 10px;
+}
+.contact-row {
+  position: relative;
+  display: inline-block;
+  &::before{
+    @include pseudo;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: $blue;
+    transition: width 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    .contact-text {
+      color: #fff;
+    }
+    .contact-svg-wrap {
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}
+.contact-svg-wrap {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-color: #fff;
+  color: $dark;
+  transition: all 0.3s ease;
+}
+.svgcontact {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.contact-text {
+  width: calc(100% - 40px);
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: 0 20px 0 10px;
+  box-sizing: border-box;
+  color: $light;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s ease;
+}

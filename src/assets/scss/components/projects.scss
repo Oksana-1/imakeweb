@@ -1,0 +1,24 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+}
+.project-item-inner {
+  padding-top: 100%;
+  overflow: hidden;
+  &:hover {
+    .darker-slide-bg {
+      transform: translate(-100%, 0);
+    }
+  }
+}
+.darker-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $darker;
+  z-index: 2;
+  transform: translate(0, 0);
+  transition: transform 0.8s cubic-bezier(.455,.03,.515,.955);
+}
