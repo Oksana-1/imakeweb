@@ -1,7 +1,7 @@
 <template>
     <main class="im-main">
-        <section class="im-top-section">
-            <div class="im-container-1100">
+        <section class="im-top-section im-svg-bg flex-row">
+            <div class="im-container-1100 centered-child">
                 <div class="im-title-wrap centered">
                     <div class="im-common-title dark">Professional Frontend Development</div>
                     <div class="im-common-subtitle">

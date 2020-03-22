@@ -12,7 +12,7 @@
                     <div class="text">
                         <p>Hello there. My name is Oksana.</p>
                         <p>I live in Kyiv, Ukraine with my husband and a dog.</p>
-                        <p>Besides frontend I like running, reading, summer and herbal tea.</p>
+                        <p>Besides frontend I like running and reading. Enjoy summer and herbal tea.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
