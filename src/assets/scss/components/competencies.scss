@@ -1,0 +1,12 @@
+.logos-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.side-logo-fix {
+    flex: 0 0 100px;
+    width: 100px;
+    max-width: 100px;
+    height: 100px;
+}

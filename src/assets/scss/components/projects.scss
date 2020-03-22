@@ -1,12 +1,13 @@
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(5, 1fr);
 }
 .project-item-inner {
   padding-top: 100%;
   overflow: hidden;
   &:hover {
-    .darker-slide-bg {
+    .darker-slide-bg,
+    .light-slide-bg {
       transform: translate(-100%, 0);
     }
   }
@@ -18,6 +19,17 @@
   bottom: 0;
   right: 0;
   background-color: $darker;
+  z-index: 2;
+  transform: translate(0, 0);
+  transition: transform 0.8s cubic-bezier(.455,.03,.515,.955);
+}
+.light-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $light;
   z-index: 2;
   transform: translate(0, 0);
   transition: transform 0.8s cubic-bezier(.455,.03,.515,.955);

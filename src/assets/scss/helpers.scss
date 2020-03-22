@@ -11,6 +11,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+.flex-33 {
+  flex: 0 0 33.33%;
+  width: 33.33%;
+  max-width: 33.33%;
+}
 .flex-50 {
   flex: 0 0 50%;
   width: 50%;
@@ -59,6 +64,9 @@ a.abs-block-link{
 }
 .dark {
   color: $dark;
+}
+.darker {
+  color: $darker;
 }
 .light-bg {
   background-color: $light;
