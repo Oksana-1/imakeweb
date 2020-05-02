@@ -56,7 +56,7 @@
             <div class="im-container-1100">
                 <div class="text centered">
                     <p>&copy; Copyright 'I make web'.<br/>
-                        Many thanks <a href="https://www.svgbackgrounds.com/">SVGBackgrounds.com</a> for the cool customisable background.</p>
+                        Many thanks <a href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds.com</a> for the cool customisable background.</p>
                 </div>
             </div>
         </div>

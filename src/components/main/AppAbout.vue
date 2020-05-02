@@ -1,7 +1,7 @@
 <template>
     <section class="im-bottom-section">
         <div class="im-container-1100">
-            <div class="im-common-title dark centered">About</div>
+            <div class="im-common-title dark centered">Me</div>
             <div class="about-grid">
                 <div class="about-img-container">
                     <div class="squared-block img-fix">
