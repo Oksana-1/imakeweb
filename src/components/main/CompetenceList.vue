@@ -1,43 +1,30 @@
 <template>
-    <section class="im-common-section">
-        <div class="im-container-1100">
-            <div class="im-common-title dark centered">Competencies</div>
-            <div class="flex-row">
-                <div class="flex-33">
-                    <div class="logos-wrap margin-b-20">
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/html5_logo.svg" alt="HTML5">
-                        </div>
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/css3_logo.svg" alt="CSS3">
-                        </div>
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/js_logo.svg" alt="JS">
-                        </div>
-                    </div>
-                    <div class="im-common-subtitle centered">Solid basics</div>
+    <section class="vh-100">
+        <div class="flex-row full-height border-bg">
+            <div class="flex-33 competency-column-angle">
+                <div class="dark-bg full-height competency-column-inner">
+                    <div class="im-common-title relative-parent white">Skills</div>
                 </div>
-                <div class="flex-33">
-                    <div class="logos-wrap margin-b-20">
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/vue_logo.svg" alt="VUE">
-                        </div>
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/react_logo.svg" alt="REACT">
-                        </div>
+            </div>
+            <div class="flex-66 competency-column-chart">
+                <div class="competency-column-inner full-height">
+                    <div class="im-skills-container">
+                        <ul class="im-skills-chart">
+                            <li class="im-skills-row"
+                                v-for="(skill, i) in skills"
+                                :key="`basicSkills-${i}`">
+                                <span class="im-skills-cell">{{skill.name}}</span>
+                                <span class="im-line-cell" :data-level="skill.level"></span>
+                            </li>
+                        </ul>
+                        <ul class="im-skills-legend">
+                            <li class="im-legend"
+                                v-for="(legend, i) in skillsLegend"
+                                :key="`legend-${i}`">
+                                <span class="legend-cell">{{ legend.title }}</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="im-common-subtitle centered margin-b-20">Modern frameworks</div>
-                </div>
-                <div class="flex-33">
-                    <div class="logos-wrap margin-b-20">
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/webpack_logo.svg" alt="WEBPACK">
-                        </div>
-                        <div class="side-logo-fix">
-                            <img class="fits" src="../../assets/images/github_logo_octocat.svg" alt="GITHUB">
-                        </div>
-                    </div>
-                    <div class="im-common-subtitle centered margin-b-20">Perfect tooling</div>
                 </div>
             </div>
         </div>
@@ -46,6 +33,26 @@
 
 <script>
     export default {
-        name: "CompetenceList"
+        name: "CompetenceList",
+        data() {
+            return {
+                skills: [
+                    { name: 'HTML', level: 85 },
+                    { name: 'CSS', level: 90 },
+                    { name: 'JavaScript', level: 70 },
+                    { name: 'TypeScript', level: 40 },
+                    { name: 'Vue', level: 70 },
+                    { name: 'React', level: 20 },
+                    { name: 'Jest', level: 50 }
+                ],
+                skillsLegend: [
+                    { title: 'Novice' },
+                    { title: 'Beginner' },
+                    { title: 'Intermediate' },
+                    { title: 'Advanced' },
+                    { title: 'Expert' }
+                ]
+            }
+        }
     }
 </script>

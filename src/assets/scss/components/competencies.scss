@@ -1,12 +1,93 @@
-.logos-wrap {
+.competency-column-inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.side-logo-fix {
-    flex: 0 0 100px;
+.competency-column-angle {
+    .competency-column-inner {
+        position: relative;
+        &::before {
+            @include pseudo();
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transform: skewX(15deg) translateX(25%);
+        }
+        &.dark-bg {
+            &::before {
+                background-color: $dark;
+            }
+        }
+    }
+}
+.competency-column-chart {
+    margin-left: -50px;
+}
+.competency-column-inner {
+    padding: 30px 30px 30px 120px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.im-skills-row {
+    font-size: 0;
+}
+.im-skills-cell {
+    display: inline-block;
+    vertical-align: middle;
     width: 100px;
-    max-width: 100px;
-    height: 100px;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.im-line-cell {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 100px);
+    position: relative;
+    height: 20px;
+    background-color: #fff;
+    z-index: 4;
+    &::after{
+        @include pseudo();
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $blue;
+    }
+    $levels: 20, 30, 40, 50, 60, 70, 80, 85, 90, 100;
+    @each $level in $levels {
+        &[data-level="#{$level}"] {
+            &:after {
+                width: $level*1%;
+            }
+        }
+    }
+}
+.im-skills-container {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+.im-skills-legend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    padding-left: 100px;
+    z-index: 5;
+}
+.im-legend {
+    flex-grow: 1;
+    &:not(:last-child) {
+        border-right: 1px solid rgba(232, 234, 246, 0.3);
+    }
+}
+.legend-cell {
+    transform: translateY(50px) rotate(45deg);
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
 }

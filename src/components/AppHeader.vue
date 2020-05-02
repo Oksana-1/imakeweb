@@ -11,7 +11,7 @@
             <div v-if="menuIsOpened"
                  class="im-menu-container">
                 <ul>
-                    <li><a href="" class="im-common-title white centered">Competencies</a></li>
+                    <li><a href="" class="im-common-title white centered">Skills</a></li>
                     <li><a href="" class="im-common-title white centered">Projects</a></li>
                     <li><a href="" class="im-common-title white centered">About</a></li>
                     <li><a href="" class="im-common-title white centered">Contacts</a></li>
