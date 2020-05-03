@@ -1,8 +1,8 @@
 <template>
-    <footer class="im-footer">
+    <footer class="im-footer" id="contacts">
         <div class="im-container-1100">
             <div class="im-footer-container">
-                <div class="im-common-title centered">Contacts</div>
+                <div class="im-common-title centered">Get in touch</div>
                 <div class="flex-row flex-justify-center margin-b-20">
                     <div class="contact-row">
                         <a href="mailto:belous.oksana@gmail.com" class="abs-block-link"></a>
@@ -55,8 +55,8 @@
         <div class="im-copyright">
             <div class="im-container-1100">
                 <div class="text centered">
-                    <p>&copy; Copyright 'I make web'.<br/>
-                        Many thanks <a href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds.com</a> for the cool customisable background.</p>
+                    <p>&copy; {{ currentYear }} 'I make web' - All rights reserved.<br/>
+                        Many thanks <a href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds.com</a> for the cool customisable backgrounds.</p>
                 </div>
             </div>
         </div>
@@ -70,6 +70,11 @@
         name: "AppFooter.vue",
         components: {
             SvgSprite
+        },
+        data() {
+            return {
+                currentYear: new Date().getFullYear()
+            }
         }
     }
 </script>

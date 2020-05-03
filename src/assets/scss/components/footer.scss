@@ -1,11 +1,14 @@
 .im-footer {
   background-color: $dark;
   color: #fff;
-  padding: 45px 0 0 0;
+  padding: 60px 0 0 0;
   z-index: 5;
+  .im-common-title {
+    margin-bottom: 60px;
+  }
 }
 .im-footer-container {
-  padding: 0 0 45px 0;
+  padding: 0 0 60px 0;
 }
 .im-copyright {
   font-size: 12px;
@@ -20,7 +23,6 @@
 }
 .contact-row {
   position: relative;
-  display: inline-block;
   &::before{
     @include pseudo;
     top: 0;
@@ -41,6 +43,9 @@
       color: #fff;
       background-color: transparent;
     }
+  }
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 }
 .contact-svg-wrap {

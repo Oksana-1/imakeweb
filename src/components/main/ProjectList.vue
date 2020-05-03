@@ -1,7 +1,7 @@
 <template>
-    <section class="im-projects-section">
+    <section class="im-projects-section" id="projects">
         <div class="im-container-1100">
-            <div class="im-common-title dark centered">Some Projects</div>
+            <div class="im-common-title dark centered">Selected work</div>
         </div>
         <div class="project-grid">
             <div class="project-item">
