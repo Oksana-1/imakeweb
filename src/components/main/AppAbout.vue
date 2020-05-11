@@ -10,17 +10,17 @@
                 </div>
                 <div class="about-text-container">
                     <div class="text">
-                        <p>Hello there. <br/>My name is Oksana.</p>
-                        <p>I am a self-taught Frontend Developer with heightened level of curiosity.</p>
+                        <p>Hello there. My name is Oksana.</p>
+                        <p>I am a Frontend Developer with the heightened level of curiosity.</p>
                         <p>My expertise in pure HTML, CSS and JS makes me really thoughtful and selective in choosing frameworks, libraries and tools.</p>
-                        <p>I tend to write clear and concise code that meets SOLID principles.</p>
+                        <p>I do my best in writing clear and concise code. Sometimes I am happy with result.</p>
                     </div>
                 </div>
                 <div class="about-text-container">
                     <div class="text right">
                         <p>I live in Kyiv, Ukraine with my husband and a dog.</p>
                         <p>Absolutely in love with marathon running.</p>
-                        <p>And sometimes I am a person who spoils a perfect wedding photo.</p>
+                        <p>And it happens that I am the person who spoils a perfect wedding photo.</p>
                     </div>
                 </div>
                 <div class="about-img-container left-top-aligned">

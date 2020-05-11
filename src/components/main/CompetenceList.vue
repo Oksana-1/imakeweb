@@ -1,6 +1,6 @@
 <template>
     <section class="vh-100" id="skills">
-        <div class="flex-row full-height border-bg">
+        <div class="flex-row full-height light-bg">
             <div class="flex-33 competency-column-angle">
                 <div class="dark-bg full-height competency-column-inner">
                     <div class="im-common-title relative-parent white">Core Skills</div>
