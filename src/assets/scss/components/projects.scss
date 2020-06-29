@@ -5,11 +5,20 @@
   background-size: cover;
   .im-common-title {
     margin-bottom: 60px;
+    @media only screen and (max-width: $mobile){
+      margin-bottom: 50px;
+    }
   }
 }
 .project-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  @media only screen and (max-width: $tablete) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (max-width: $mobile) {
+    grid-template-columns: 100%;
+  }
 }
 .project-item-inner {
   padding-top: 100%;
@@ -42,4 +51,26 @@
   z-index: 2;
   transform: translate(0, 0);
   transition: transform 0.8s cubic-bezier(.455,.03,.515,.955);
+}
+/*TO DO Fix this temp solution*/
+@media only screen and (max-width: $tablete) {
+  .tablete-hide {
+    display: none;
+  }
+}
+@media  only screen and (max-width: $mobile) {
+  .project-item{
+    &:nth-child(4n+3), &:last-child {
+      .darker-slide-bg {
+        background-color: $light;
+      }
+
+      .white {
+        color: $darker;
+      }
+    }
+  }
+  .tablete-hide {
+    display: block;
+  }
 }

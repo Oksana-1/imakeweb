@@ -23,6 +23,7 @@
 }
 .contact-row {
   position: relative;
+  margin-bottom: 20px;
   &::before{
     @include pseudo;
     top: 0;
@@ -46,6 +47,21 @@
   }
   &:not(:last-child) {
     margin-right: 20px;
+  }
+  @media only screen and (max-width: $mobile) {
+    width: calc(100% - 100px);
+    &:not(:last-child),
+    &:last-child{
+      margin: 0 50px;
+    }
+    display: flex;
+    align-items: center;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .contact-text {
+        text-align: right;
+      }
+    }
   }
 }
 .contact-svg-wrap {

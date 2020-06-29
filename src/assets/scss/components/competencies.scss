@@ -1,9 +1,9 @@
-.competency-column-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .competency-column-angle {
+    @media only screen and (max-width: $tablete-big) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
     .competency-column-inner {
         position: relative;
         &::before {
@@ -19,15 +19,48 @@
                 background-color: $dark;
             }
         }
+        @media only screen and (max-width: $tablete-big) {
+            &::before {
+                content: none;
+            }
+        }
+        @media only screen and (max-width: $tablete)  {
+            &.dark-bg {
+                background-color: $light;
+            }
+        }
     }
 }
 .competency-column-chart {
     margin-left: -50px;
+    @media only screen and (max-width: $tablete-big) {
+        margin-left: 0;
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 100px;
+    }
 }
 .competency-column-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 30px 30px 30px 150px;
     box-sizing: border-box;
     margin: auto;
+    @media only screen and (max-width: $tablete-big) {
+        padding: 30px;
+        height: 200px;
+        .im-common-title {
+            margin-bottom: 0;
+        }
+    }
+    @media only screen and (max-width: $tablete) {
+        height: auto;
+        .im-common-title {
+            color: $dark;
+        }
+    }
 }
 .im-skills-row {
     font-size: 0;
@@ -90,4 +123,9 @@
     font-size: 14px;
     position: absolute;
     bottom: 0;
+}
+.competency-component {
+    @media only screen and (max-width: $tablete){
+        height: auto;
+    }
 }

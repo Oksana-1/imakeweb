@@ -3,9 +3,13 @@
   grid-template-columns: 45% 55%;
   grid-template-rows: 300px;
   align-items: center;
+  @media only screen and (max-width: $mobile) {
+    grid-template-columns: 100%;
+  }
 }
 .about-img-container {
   width: 300px;
+  max-width: calc(100% - 30px);
   box-sizing: border-box;
   position: relative;
   &::before {
@@ -30,9 +34,33 @@
   }
   &.left-top-aligned {
     margin: 0 0 auto 0;
+    @media only screen and (max-width: $mobile) {
+      margin-top: 30px;
+      &::before {
+        top: -30px;
+        bottom: auto;
+      }
+    }
   }
 }
 .about-text-container {
   padding: 0 50px;
   margin-bottom: 30px;
+  @media only screen and (max-width: $mobile){
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: $mobile) {
+  .mobile-order-1 {
+    order: 1;
+  }
+  .mobile-order-2 {
+    order: 2;
+  }
+  .mobile-order-3 {
+    order: 3;
+  }
+  .mobile-order-4 {
+    order: 4;
+  }
 }

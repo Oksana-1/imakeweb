@@ -53,8 +53,8 @@
                     </div>
                 </div>
             </div>
-            <div class="project-item"></div>
-            <div class="project-item"></div>
+            <div class="project-item tablete-hide"></div>
+            <div class="project-item tablete-hide"></div>
             <div class="project-item"></div>
             <div class="project-item">
                 <div class="project-item-inner img-fix">
