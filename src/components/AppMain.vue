@@ -1,6 +1,6 @@
 <template>
     <main class="im-main">
-        <section class="im-top-section im-svg-bg flex-row">
+        <section class="im-top-section im-svg-bg flex-row" data-aos="fade-up">
             <div class="im-container-1100 centered-child">
                 <div class="im-title-wrap centered">
                     <div class="im-common-title dark">Professional Frontend Development</div>

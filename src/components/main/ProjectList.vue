@@ -1,5 +1,5 @@
 <template>
-    <section class="im-projects-section" id="projects">
+    <section class="im-projects-section" id="projects" data-aos="fade-up">
         <div class="im-container-1100">
             <div class="im-common-title dark centered">Selected work</div>
         </div>

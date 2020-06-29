@@ -1,5 +1,5 @@
 <template>
-    <section class="im-bottom-section" id="about">
+    <section class="im-bottom-section" id="about" data-aos="fade-up">
         <div class="im-container-1100">
             <div class="im-common-title dark centered">Me</div>
             <div class="about-grid">

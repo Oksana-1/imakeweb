@@ -1,5 +1,5 @@
 <template>
-    <section class="vh-100 competency-component" id="skills">
+    <section class="vh-100 competency-component" id="skills" data-aos="fade-up">
         <div class="flex-row full-height light-bg">
             <div class="flex-33 competency-column-angle">
                 <div class="dark-bg full-height competency-column-inner">
