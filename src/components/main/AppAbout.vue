@@ -1,7 +1,7 @@
 <template>
     <section class="im-bottom-section" id="about" data-aos="fade-up">
         <div class="im-container-1100">
-            <div class="im-common-title dark centered">Me</div>
+            <h2 class="im-common-title dark centered">Me</h2>
             <div class="about-grid">
                 <div class="about-img-container right-bottom-aligned mobile-order-1">
                     <div class="squared-block img-fix">

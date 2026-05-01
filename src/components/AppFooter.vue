@@ -2,48 +2,48 @@
     <footer class="im-footer" id="contacts">
         <div class="im-container-1100">
             <div class="im-footer-container">
-                <div class="im-common-title centered">Get in touch</div>
+                <h2 class="im-common-title centered">Get in touch</h2>
                 <div class="flex-row flex-justify-center margin-b-20">
                     <div class="contact-row">
-                        <a href="mailto:belous.oksana@gmail.com" class="abs-block-link"></a>
+                        <a href="mailto:belous.oksana@gmail.com" class="abs-block-link" aria-label="Send email to Oksana Bilous"></a>
                         <div class="contact-svg-wrap">
-                            <svg class="svgcontact">
+                            <svg class="svgcontact" aria-hidden="true">
                                 <use xlink:href="#email"></use>
                             </svg>
                         </div>
                         <div class="contact-text">E-mail</div>
                     </div>
                     <div class="contact-row">
-                        <a href="tel:+380504438488" class="abs-block-link"></a>
+                        <a href="tel:+380504438488" class="abs-block-link" aria-label="Call Oksana Bilous"></a>
                         <div class="contact-svg-wrap">
-                            <svg class="svgcontact">
+                            <svg class="svgcontact" aria-hidden="true">
                                 <use xlink:href="#tel"></use>
                             </svg>
                         </div>
                         <div class="contact-text">Phone</div>
                     </div>
                     <div class="contact-row">
-                        <a href="https://t.me/bilousoksana" class="abs-block-link"></a>
+                        <a href="https://t.me/bilousoksana" class="abs-block-link" aria-label="Contact Oksana Bilous on Telegram"></a>
                         <div class="contact-svg-wrap">
-                            <svg class="svgcontact">
+                            <svg class="svgcontact" aria-hidden="true">
                                 <use xlink:href="#telegram"></use>
                             </svg>
                         </div>
                         <div class="contact-text">Telegram</div>
                     </div>
                     <div class="contact-row">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oksana-bilous/" class="abs-block-link"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oksana-bilous/" class="abs-block-link" aria-label="Oksana Bilous on LinkedIn"></a>
                         <div class="contact-svg-wrap">
-                            <svg class="svgcontact">
+                            <svg class="svgcontact" aria-hidden="true">
                                 <use xlink:href="#linkedin"></use>
                             </svg>
                         </div>
                         <div class="contact-text">LinkedIn</div>
                     </div>
                     <div class="contact-row">
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oksana-1" class="abs-block-link"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oksana-1" class="abs-block-link" aria-label="Oksana Bilous on Github"></a>
                         <div class="contact-svg-wrap">
-                            <svg class="svgcontact">
+                            <svg class="svgcontact" aria-hidden="true">
                                 <use xlink:href="#github"></use>
                             </svg>
                         </div>

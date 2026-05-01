@@ -1,12 +1,15 @@
 <template>
     <header class="im-header">
-        <div class="im-menu-wrap"
-             :class="{menuIsOpened}">
-            <div class="im-sandwich-container"
-                @click="menuIsOpened = !menuIsOpened">
-                <div class="im-sandwich"></div>
-            </div>
-        </div>
+        <nav class="im-menu-wrap"
+             :class="{menuIsOpened}"
+             aria-label="Main navigation">
+            <button class="im-sandwich-container"
+                @click="menuIsOpened = !menuIsOpened"
+                :aria-expanded="menuIsOpened"
+                aria-label="Toggle navigation menu">
+                <span class="im-sandwich" />
+            </button>
+        </nav>
         <transition name="fade" :duration="{ enter: 1500, leave: 500 }">
             <div v-if="menuIsOpened"
                  class="im-menu-container">

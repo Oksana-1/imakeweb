@@ -22,6 +22,9 @@
   height: 40px;
   cursor: pointer;
   margin: auto;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 .im-sandwich {
