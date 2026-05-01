@@ -32,7 +32,7 @@
                         <div class="contact-text">Telegram</div>
                     </div>
                     <div class="contact-row">
-                        <a target="_blank" href="https://www.linkedin.com/in/oksana-bilous/" class="abs-block-link"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oksana-bilous/" class="abs-block-link"></a>
                         <div class="contact-svg-wrap">
                             <svg class="svgcontact">
                                 <use xlink:href="#linkedin"></use>
@@ -41,7 +41,7 @@
                         <div class="contact-text">LinkedIn</div>
                     </div>
                     <div class="contact-row">
-                        <a target="_blank" href="https://github.com/Oksana-1" class="abs-block-link"></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oksana-1" class="abs-block-link"></a>
                         <div class="contact-svg-wrap">
                             <svg class="svgcontact">
                                 <use xlink:href="#github"></use>
@@ -56,7 +56,7 @@
             <div class="im-container-1100">
                 <div class="text centered">
                     <p>&copy; {{ currentYear }} 'I make web' - All rights reserved.<br/>
-                        Many thanks <a href="https://www.svgbackgrounds.com/" target="_blank">SVGBackgrounds.com</a> for the cool customisable backgrounds.</p>
+                        Many thanks <a href="https://www.svgbackgrounds.com/" target="_blank" rel="noopener noreferrer">SVGBackgrounds.com</a> for the cool customisable backgrounds.</p>
                 </div>
             </div>
         </div>
