@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:400,700&display=swap");
+
+@font-face {
+  font-family: "Panton";
+  src: url("../fonts/Panton-LightCaps.eot");
+  src: url("../fonts/Panton-LightCaps.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-LightCaps.woff2") format("woff2"), url("../fonts/Panton-LightCaps.woff") format("woff"), url("../fonts/Panton-LightCaps.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("../fonts/Panton-BlackCaps.eot");
+  src: url("../fonts/Panton-BlackCaps.eot?#iefix") format("embedded-opentype"), url("../fonts/Panton-BlackCaps.woff2") format("woff2"), url("../fonts/Panton-BlackCaps.woff") format("woff"), url("../fonts/Panton-BlackCaps.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}

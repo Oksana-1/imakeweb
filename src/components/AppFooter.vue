@@ -41,7 +41,7 @@
                         <div class="contact-text">LinkedIn</div>
                     </div>
                     <div class="contact-row">
-                        <a target="_blank" href="#" class="abs-block-link"></a>
+                        <a target="_blank" href="https://github.com/Oksana-1" class="abs-block-link"></a>
                         <div class="contact-svg-wrap">
                             <svg class="svgcontact">
                                 <use xlink:href="#github"></use>
