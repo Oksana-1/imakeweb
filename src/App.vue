@@ -8,7 +8,7 @@
 
 <script>
   import AppHeader from "./components/AppHeader.vue";
-  import AppMain from "@/components/AppMain";
+  import AppMain from "@/components/AppMain.vue";
   import AppFooter from './components/AppFooter.vue';
 
 export default {
@@ -20,7 +20,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  @import 'assets/scss/app';
-</style>

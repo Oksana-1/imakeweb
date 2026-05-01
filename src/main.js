@@ -1,14 +1,12 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
+import './assets/css/app.css'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-Vue.config.productionTip = false;
+const app = createApp(App)
 
-new Vue({
-  created () {
-    AOS.init()
-  },
-  render: h => h(App),
-}).$mount('#app');
+AOS.init()
+
+app.mount('#app')

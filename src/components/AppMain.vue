@@ -18,9 +18,9 @@
 </template>
 
 <script>
-    import ProjectList from './main/ProjectList';
-    import CompetenceList from "./main/CompetenceList";
-    import AppAbout from "./main/AppAbout";
+    import ProjectList from './main/ProjectList.vue';
+    import CompetenceList from "./main/CompetenceList.vue";
+    import AppAbout from "./main/AppAbout.vue";
     export default {
         name: "AppMain",
         components: {
