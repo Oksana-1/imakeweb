@@ -4,70 +4,28 @@
             <div class="im-common-title dark centered">Selected work</div>
         </div>
         <div class="project-grid">
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="http://podshoffe.com.ua/" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/podshoffe.jpg" alt="Podshoffe project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>Podshoffe</b></div>
+            <template v-for="(project, i) in projects" :key="`project-${i}`">
+                <div class="project-item">
+                    <div class="project-item-inner img-fix">
+                        <a :href="project.link" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
+                        <img class="fits cover" :src="getImageUrl(project.image)" :alt="project.alt"/>
+                        <div class="darker-slide-bg">
+                            <div class="abs-centered white text centered"><b>{{ project.name }}</b></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-item"></div>
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="https://rspartners.pl/" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/rs-partners.jpg" alt="RS Partners project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>RS Partners</b></div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-item"></div>
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="https://shop.praga-auto.com.ua/" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/praga-auto.jpg" alt="Praga-auto project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>Praga-auto</b></div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-item"></div>
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="https://landing.altway.ru/" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/altway.jpg" alt="Altway project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>Altway</b></div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-item"></div>
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="https://www.marifarm.si/" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/marifarm.jpg" alt="Marifarm project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>Marifarm</b></div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-item tablete-hide"></div>
-            <div class="project-item tablete-hide"></div>
-            <div class="project-item"></div>
-            <div class="project-item">
-                <div class="project-item-inner img-fix">
-                    <a href="https://unmomento.com.ua/o-kompanii/kontakty.html" target="_blank" rel="noopener noreferrer" class="abs-block-link"></a>
-                    <img class="fits cover" src="../../assets/images/unmomento.jpg" alt="Umnomento project screen"/>
-                    <div class="darker-slide-bg">
-                        <div class="abs-centered white text centered"><b>Umnomento</b></div>
-                    </div>
-                </div>
-            </div>
+                <div v-if="i === 4" class="project-item tablete-hide"></div>
+                <div v-if="i === 4" class="project-item tablete-hide"></div>
+                <div class="project-item"></div>
+            </template>
         </div>
     </section>
 </template>
 
 <script setup>
+import { projects } from '@/data/projects';
+
+const getImageUrl = (name) => {
+    return new URL(`../../assets/images/${name}`, import.meta.url).href;
+};
 </script>
