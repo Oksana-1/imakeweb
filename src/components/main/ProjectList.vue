@@ -69,8 +69,5 @@
     </section>
 </template>
 
-<script>
-    export default {
-        name: "ProjectList"
-    }
+<script setup>
 </script>

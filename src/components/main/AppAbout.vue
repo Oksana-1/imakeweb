@@ -33,8 +33,5 @@
     </section>
 </template>
 
-<script>
-    export default {
-        name: "AppAbout"
-    }
+<script setup>
 </script>

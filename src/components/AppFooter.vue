@@ -64,17 +64,8 @@
     </footer>
 </template>
 
-<script>
-    import SvgSprite from './SvgSprite.vue';
-    export default {
-        name: "AppFooter.vue",
-        components: {
-            SvgSprite
-        },
-        data() {
-            return {
-                currentYear: new Date().getFullYear()
-            }
-        }
-    }
+<script setup>
+import SvgSprite from './SvgSprite.vue';
+
+const currentYear = new Date().getFullYear();
 </script>

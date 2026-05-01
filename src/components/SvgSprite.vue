@@ -54,10 +54,7 @@
 
 </template>
 
-<script>
-    export default {
-        name: "SvgSprite.vue"
-    }
+<script setup>
 </script>
 
 <style scoped>

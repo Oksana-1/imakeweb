@@ -21,23 +21,17 @@
     </header>
 </template>
 
-<script>
-    import { exist, scrollTo } from "@/utils/helpers";
-    export default {
-        name: "AppHeader.vue",
-        data() {
-            return {
-                menuIsOpened: false
-            }
-        },
-        methods: {
-            goToBlock(blockSelector) {
-                this.menuIsOpened = false;
-                const block = document.querySelector(blockSelector);
-                if (exist(block)) {
-                    scrollTo(block);
-                }
-            }
-        }
+<script setup>
+import { ref } from 'vue';
+import { exist, scrollTo } from "@/utils/helpers";
+
+const menuIsOpened = ref(false);
+
+const goToBlock = (blockSelector) => {
+    menuIsOpened.value = false;
+    const block = document.querySelector(blockSelector);
+    if (exist(block)) {
+        scrollTo(block);
     }
+};
 </script>
