@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import ProjectList from './main/ProjectList.vue';
-import CompetenceList from "./main/CompetenceList.vue";
-import AppAbout from "./main/AppAbout.vue";
+import ProjectList from '@/components/main/ProjectList.vue';
+import CompetenceList from "@/components/main/CompetenceList.vue";
+import AppAbout from "@/components/main/AppAbout.vue";
 </script>

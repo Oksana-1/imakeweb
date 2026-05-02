@@ -65,7 +65,7 @@
 </template>
 
 <script setup>
-import SvgSprite from './SvgSprite.vue';
+import SvgSprite from '@/components/SvgSprite.vue';
 
 const currentYear = new Date().getFullYear();
 </script>
